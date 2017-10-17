@@ -1,15 +1,15 @@
-import '../stylesheets/ui.scss'
-import Calendar from 'react-icons/lib/fa/calendar'
-import Dev from 'react-icons/lib/md/developer-mode'
-import Finance from 'react-icons/lib/md/attach-money'
-import Cheat from 'react-icons/lib/ti/media-pause'
+import '../stylesheets/ui.scss';
+import Calendar from 'react-icons/lib/fa/calendar';
+import Dev from 'react-icons/lib/md/developer-mode';
+import Finance from 'react-icons/lib/md/attach-money';
+import Cheat from 'react-icons/lib/ti/media-pause';
 
 const percentToDecimal = (decimal) => {
-    return ((decimal * 100) + '%')
+    return ((decimal * 100) + '%');
 }
 
 const calcGoalProgress = (total, goal) => {
-  return percentToDecimal(total/goal)
+  return percentToDecimal(total/goal);
 }
 
 export const LearningDayCount = ({total, cheat, development, finance, goal}) => (
@@ -43,4 +43,4 @@ export const LearningDayCount = ({total, cheat, development, finance, goal}) => 
       </span>
     </div>
   </div>
-)
+);
