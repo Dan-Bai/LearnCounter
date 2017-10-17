@@ -5,7 +5,7 @@ import Finance from 'react-icons/lib/md/attach-money';
 import Cheat from 'react-icons/lib/ti/media-pause';
 
 const percentToDecimal = (decimal) => {
-    return ((decimal * 100) + '%');
+    return ((decimal * 100).toFixed(2) + '%');
 }
 
 const calcGoalProgress = (total, goal) => {
@@ -44,3 +44,11 @@ export const LearningDayCount = ({total, cheat, development, finance, goal}) => 
     </div>
   </div>
 );
+
+LearningDayCount.defaultProps =  {
+  total: 70,
+  cheat: 10,
+  development: 20,
+  finance: 20,
+  goal: 300
+}
