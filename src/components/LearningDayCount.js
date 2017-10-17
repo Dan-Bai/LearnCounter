@@ -1,4 +1,5 @@
 import '../stylesheets/ui.scss';
+import { PropTypes } from 'react'
 import Calendar from 'react-icons/lib/fa/calendar';
 import Dev from 'react-icons/lib/md/developer-mode';
 import Finance from 'react-icons/lib/md/attach-money';
@@ -51,4 +52,12 @@ LearningDayCount.defaultProps =  {
   development: 20,
   finance: 20,
   goal: 300
+}
+
+LearningDayCount.propTypes = {
+  total: PropTypes.number.isRequired,
+  cheat: PropTypes.number,
+  development: PropTypes.number,
+  finance: PropTypes.number,
+  goal: PropTypes.number
 }

@@ -1,4 +1,4 @@
-import { createClass } from 'react';
+import { createClass, PropTypes } from 'react';
 import '../stylesheets/ui.scss';
 import Calendar from 'react-icons/lib/fa/calendar';
 import Dev from 'react-icons/lib/md/developer-mode';
@@ -6,6 +6,13 @@ import Finance from 'react-icons/lib/md/attach-money';
 import Cheat from 'react-icons/lib/ti/media-pause';
 
 export const LearningDayCount = createClass({
+  propTypes: {
+    total: PropTypes.number.isRequired,
+    cheat: PropTypes.number,
+    development: PropTypes.number,
+    finance: PropTypes.number,
+    goal: PropTypes.number
+  },
   getDefaultProps() {
     return {
       total: 70,
